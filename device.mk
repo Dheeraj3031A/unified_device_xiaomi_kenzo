@@ -585,3 +585,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
      persist.vendor.data.iwlan.enable=true \
      ro.telephony.iwlan_operation_mode=legacy
+
+# SafetyNet
+PRODUCT_SAFETYNET_MODEL_HACK := true
