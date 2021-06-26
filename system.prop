@@ -215,3 +215,7 @@ ro.hdmi.mirror.enable=true
 ro.min.fling_velocity=140
 ro.max.fling_velocity=40000
 
+# ZRAM
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=180
+ro.zram.periodic_wb_delay_hours=24
