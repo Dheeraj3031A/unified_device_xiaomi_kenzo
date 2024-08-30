@@ -499,13 +499,9 @@ on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
 
-    # Restrict permissions to socket file 
-    # to hide Magisk & co.
-    chmod 440 /proc/net/unix
-
 on property:vold.decrypt=trigger_restart_framework
     restart vendor.camera-provider-2-4
-    start vendor.wcnss-service
+    start wcnss-service
     start config_bt_addr
 
 service vendor.cnd /system/vendor/bin/cnd
@@ -637,6 +633,7 @@ service vendor.qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
 on property:sys.boot_completed=1
     start vendor.qcom-post-boot
     trigger enable-low-power
+    restart cameraserver
 
 on property:init.svc.recovery=running
     trigger enable-low-power

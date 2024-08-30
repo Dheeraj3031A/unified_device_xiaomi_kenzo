@@ -199,6 +199,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0_vendor
 
+PRODUCT_PACKAGES += \
+    Snap
+
 # Codec2 modules
 PRODUCT_PACKAGES += \
     com.android.media.swcodec \
@@ -305,11 +308,9 @@ PRODUCT_PACKAGES += \
 
 # IMS
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.0 \
-    android.hardware.radio.config@1.0 \
-    android.hardware.secure_element@1.0 \
     libbase_shim \
     ims-ext-common \
+    ims_ext_common.xml \
     android.hardware.radio@1.0 \
     android.hardware.radio.config@1.0 \
     android.hardware.secure_element@1.0
@@ -367,11 +368,17 @@ PRODUCT_PACKAGES += \
     libOmxAmrEnc \
     libOmxCore \
     libOmxEvrcEnc \
+    libOmxG711Enc \
     libOmxQcelp13Enc \
     libOmxSwVencHevc \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
+
+# Offline charger
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    product_charger_res_images
 
 # Privapp Whitelist
 PRODUCT_COPY_FILES += \
@@ -587,6 +594,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
      persist.vendor.data.iwlan.enable=true \
      ro.telephony.iwlan_operation_mode=legacy
-
-# SafetyNet
-PRODUCT_SAFETYNET_MODEL_HACK := true

@@ -17,5 +17,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/rr_kenzo.mk
 
 COMMON_LUNCH_CHOICES := \
+    rr_kenzo-user \
     rr_kenzo-userdebug \
     rr_kenzo-eng
